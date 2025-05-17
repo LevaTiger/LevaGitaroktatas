@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Csokis Keksz",
+      "price": 1000,
+      "img": "https://picsum.photos/200/200"
+    },
+    {
+      "id": 2,
+      "name": "Epres Keksz",
+      "price": 2000,
+      "img": "https://picsum.photos/200/200"
+    },
+    {
+      "id":3,
+      "name": "Mézes keksz",
+      "price": 450,
+      "img": "https://picsum.photos/200/200"
+    },
+    {
+      "id":4,
+      "name": "Fehércsokis Keksz",
+      "price": 2490,
+      "img": "https://picsum.photos/200/200"
+    },
+    {
+      "id": 5,
+      "name": "Varázskeksz",
+      "price": 14990,
+      "img": "https://picsum.photos/200/200"
+    }
+  ]
+  
