@@ -8,14 +8,42 @@ body {
   
 
 }
+@font-face {
+  font-family: 'AncizarSerif';
+  src: url('/src/fonts/AncizarSerif-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.active{
+/* .active{
   color: #FC5F5F;
+} */
+.active {
+  background: linear-gradient(90deg, #5f9efc, #e363f7, #5f9efc);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: colorful-move 3s linear infinite;
+  font-weight: bold;
+}
+
+
+@keyframes colorful-move {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .container-lev {

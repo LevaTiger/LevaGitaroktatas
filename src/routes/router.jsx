@@ -1,9 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Homepage from "../components/homepage/Homepage";
 import DefaultLayout from "../components/defaultLayout/DefaultLayout";
-import Webshop from "../components/webshop/Webshop";
-import Form from "../components/form/From";
-import Cart from "../components/cart/Cart";
+import Gitaroktatas from "../components/gitaroktatas/Gitaroktatas";
 
 
 const router = createBrowserRouter([
@@ -17,17 +15,9 @@ const router = createBrowserRouter([
                 element: <Homepage />
             },
             {
-                path:'/webshop',
-                element:<Webshop />
+                path:'/gitaroktatas',
+                element:<Gitaroktatas />
             },
-            {
-                path:'/form',
-                element:<Form />
-            },
-            {
-                path:'/kosar',
-                element:<Cart />
-            }
 
         ]
     },

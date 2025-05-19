@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router"
 import Header from "./header/Header"
 import Footer from "./footer/Footer"
 import { createContext, useEffect, useState } from "react"
-import Loading from "../../features/loading/Lodaing";
+import Loading from "../../features/loading/Lodaing"; //fake loading ha kell esetleg... viszont nincs rá szükség jelenleg
 
 export const JsonContext = createContext();
 

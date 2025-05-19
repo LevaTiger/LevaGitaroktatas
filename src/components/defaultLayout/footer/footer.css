@@ -1,8 +1,9 @@
 footer{
     border-top: 1px solid rgba(0, 0, 0, 0.347);
-    background-color: rgb(235, 233, 233);
+    background:radial-gradient( circle, hsl(245, 25%, 40%), hsl(245, 25%, 30%)) ;
     margin: 0;
     padding: 1rem;
+    color: white;
 }
 
 footer .footer-content .logo-footer {
@@ -61,4 +62,11 @@ footer .social-links ul li:hover{
 footer .copyright{
     border-top: 1px solid grey;
     padding: 1rem;
+}
+.social-links svg {
+    color: white;
+}
+.social-links svg:hover {
+    color: #FFBF00;
+    transition: color 200ms;
 }

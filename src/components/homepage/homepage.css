@@ -14,7 +14,7 @@
     justify-content: space-around;
     max-width: 1200px;
     width: 100%;
-    min-height: 400px;
+    min-height: 500px;
     padding-left: 2rem;
     gap: 2rem;
 }
@@ -92,6 +92,18 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 24px #0008;
+    animation: fade-in-img 0.5s ease-in-out;
+}
+@keyframes fade-in-img {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
 }
 
 .sub-heading{
@@ -111,6 +123,183 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+
+.short-info{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    
+
+    font-family: Nunito, sans-serif;
+}
+.short-info h3{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.fade-in-h3 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+    text-align: center;
+  }
+  
+  .fade-in-h3.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+@keyframes fade-in-h3 {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}   
+
+.floating-guitars {
+    position: relative;
+    min-width: 150px;
+    max-width: 300px;
+    height: 150px;
+    margin: 2rem auto;
+    
+}
+
+.floating-guitars .vortex-spin{
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/assets/img/vortex.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: vortex-spin 4s linear infinite;
+    z-index: 1;
+}
+@keyframes vortex-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.floating-guitars img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Each image will get its own animation below */
+}
+
+.floating-guitars img:nth-child(2) {
+    animation: float-guitar-1 4s linear infinite;
+}
+
+.floating-guitars img:nth-child(3) {
+    animation: float-guitar-2 4s linear infinite;
+}
+
+.floating-guitars img:nth-child(4) {
+    animation: float-guitar-3 4s linear infinite;
+}
+.floating-guitars img:nth-child(5) {
+    animation: float-guitar-4 4s linear infinite;
+}
+@keyframes float-guitar-1 {
+    0%   { transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg);}
+    100% { transform: translate(-50%, -50%) rotate(360deg) translateX(50px) rotate(-360deg);}
+}
+@keyframes float-guitar-2 {
+    0%   { transform: translate(-50%, -50%) rotate(90deg) translateX(50px) rotate(-90deg);}
+    100% { transform: translate(-50%, -50%) rotate(450deg) translateX(50px) rotate(-450deg);}
+}
+@keyframes float-guitar-3 {
+    0%   { transform: translate(-50%, -50%) rotate(180deg) translateX(50px) rotate(-180deg);}
+    100% { transform: translate(-50%, -50%) rotate(540deg) translateX(50px) rotate(-540deg);}
+}
+@keyframes float-guitar-4 {
+    0%   { transform: translate(-50%, -50%) rotate(270deg) translateX(50px) rotate(-270deg);}
+    100% { transform: translate(-50%, -50%) rotate(630deg) translateX(50px) rotate(-630deg);}
+}
+
+.short-info p {
+    font-size: larger;
+}
+
+.short-info ul li::marker{
+    content: "🎸 ";
+    font-size:1.2rem;
+}
+
+.short-info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about-me-bg{
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: black;
+}
+.about-me-bg-img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+    filter: brightness(0.7);
+    pointer-events: none;
+    user-select: none;
+}
+
+.about-me{
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    font-family: AncizarSerif, serif;
+    
+    max-width: 1200px;
+    width: 100%;
+
+}
+.about-me h2{
+    padding-left: 2rem;
+}
+
+.about-me .whitespace-on{
+    white-space:pre;
+}
+.about-me p {
+    letter-spacing: 1px;
 }
 
 @media screen and (max-width: 768px) {
@@ -144,5 +333,19 @@
 
     .homepage-articles{
         width: 95%;
+    }
+    .short-info{
+        flex-direction: column;
+    }
+    .about-me-bg-img {
+        object-position: center 20%;
+        height: 100%;
+    }
+    .about-me {
+        padding: 2rem 1rem 1rem 1rem;
+        /* background: linear-gradient(180deg, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.2) 100%); */
+        max-width: 98vw;
+        background: linear-gradient(90deg, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.2) 100%);
+
     }
 }

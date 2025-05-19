@@ -13,7 +13,7 @@ const Footer =()=>{
                         <li>
                             <NavLink to={'/'} className={({ isActive }) => (isActive ? 'active' : '')}>Főoldal</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink to={'/noi-parfumok'} className={({ isActive }) => (isActive ? 'active' : '')}>Női Parfümök</NavLink>
                         </li>
                         <li>
@@ -21,7 +21,7 @@ const Footer =()=>{
                         </li>
                         <li>
                             <NavLink to={'/rolunk'} className={({ isActive }) => (isActive ? 'active' : '')}>Rólunk</NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
