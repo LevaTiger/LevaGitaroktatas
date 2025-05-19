@@ -15,7 +15,8 @@ const Homepage = () => {
                     <div className="homepage-img">
                         <img
                             src="/assets/img/heroImgLevi.jpg"
-                            alt="Gitározás"
+                            alt="Bognár Levente Kozmix Koncert"
+                            
                         />
                     </div>
                 </div>

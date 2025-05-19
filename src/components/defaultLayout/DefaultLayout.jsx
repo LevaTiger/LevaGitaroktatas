@@ -1,7 +1,8 @@
-import { Outlet } from "react-router"
+import { Outlet, useLocation } from "react-router"
 import Header from "./header/Header"
 import Footer from "./footer/Footer"
 import { createContext, useEffect, useState } from "react"
+import Loading from "../../features/loading/Lodaing";
 
 export const JsonContext = createContext();
 
@@ -9,6 +10,14 @@ export const JsonContext = createContext();
 const DefaultLayout=()=>{
 
     const [jsonData, setJsonData] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const location = useLocation();
+
+    // useEffect(() => {
+    //     setLoading(true);
+    //     const timer = setTimeout(() => setLoading(false), 700); // fake loading, adjust as needed
+    //     return () => clearTimeout(timer);
+    // }, [location]);
 
     useEffect(()=>{
         const fetchData = async () =>{
@@ -22,6 +31,7 @@ const DefaultLayout=()=>{
 
     return(
         <JsonContext.Provider value={jsonData}>
+            {/* {loading && <Loading />} */}
             <Header />
                 <Outlet />
             <Footer />
