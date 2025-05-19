@@ -1,0 +1,44 @@
+/* Add to your kapcsola.css or global CSS */
+.kapcsolat-container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5f9efc 0%, #e363f7 100%);
+    padding: 2rem 1rem;
+}
+
+.kapcsolat-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.kapcsolat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+.kapcsolat-icon {
+    color: #5f9efc;
+    font-size: 2rem;
+}
+
+.kapcsolat-card a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.kapcsolat-card a:hover {
+    color: #e363f7;
+}

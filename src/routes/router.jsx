@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Homepage from "../components/homepage/Homepage";
 import DefaultLayout from "../components/defaultLayout/DefaultLayout";
 import Gitaroktatas from "../components/gitaroktatas/Gitaroktatas";
+import Kapcsolat from "../components/kapcsolat/Kapcsolat";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
                 path:'/gitaroktatas',
                 element:<Gitaroktatas />
             },
+            {
+                path:'/kapcsolat',
+                element: <Kapcsolat />
+            }
 
         ]
     },

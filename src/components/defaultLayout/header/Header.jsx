@@ -93,7 +93,11 @@ const Header = () => {
                         <NavLink to={'/gitaroktatas'} className={({ isActive }) => (isActive ? 'active' : '')}>Gitáróra</NavLink>
                     </li>
                     <li>
-                        <a href={'#Rólam'} className={({ isActive }) => (isActive ? 'active' : '')}>Rólam</a>
+                        <NavLink to={'/kapcsolat'} className={({ isActive }) => (isActive ? 'active' : '')}>Kapcsolat</NavLink>
+                    </li>
+                    
+                    <li>
+                        <a href={'#rolam'} className={({ isActive }) => (isActive ? 'active' : '')}>Rólam</a>
                     </li>
                 </ul>
             </nav>
