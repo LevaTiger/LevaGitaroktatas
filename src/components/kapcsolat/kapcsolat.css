@@ -1,12 +1,18 @@
 /* Add to your kapcsola.css or global CSS */
 .kapcsolat-container {
     min-height: 60vh;
+    background: linear-gradient(135deg, #5f9efc 0%, #e363f7 100%);
+}
+.kapcsolat-content{
+    padding: 2rem 1rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #5f9efc 0%, #e363f7 100%);
-    padding: 2rem 1rem;
+    max-width: 1200px;
+    width: 100%;
+
 }
 
 .kapcsolat-card {
@@ -19,6 +25,7 @@
     gap: 2rem;
     align-items: center;
     margin-top: 1.5rem;
+    width: 80%
 }
 
 .kapcsolat-item {
@@ -41,4 +48,10 @@
 }
 .kapcsolat-card a:hover {
     color: #e363f7;
+}
+@media (max-width: 768px) {
+    .kapcsolat-card {
+        width: 100%;
+        margin: .5rem;
+    }
 }

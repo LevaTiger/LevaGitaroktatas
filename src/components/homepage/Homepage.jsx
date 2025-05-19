@@ -83,7 +83,7 @@ const Homepage = () => {
                 <h2>Rólam:</h2>
                 <p>
                     <b>2012</b> óta gitározok. Először nem hittem volna,<br />
-                    szerves része lesz. <br />
+                    hogy életem szerves része lesz. <br />
                     Azonban a tanulmányaim során mindig <br />
                     két dolog érdekelt:
                     Zene és a számítógépek

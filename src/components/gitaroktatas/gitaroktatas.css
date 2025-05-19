@@ -1,0 +1,40 @@
+.gitaroktatas{
+    font-family: Nunito, sans-serif;
+   
+}
+
+.oktatas-layout{
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.oratartalma{
+    width: 50%;
+}
+.oratartalma ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.oratartalma ul li::marker{
+    content: " ♫";
+    font-size:1.2rem;
+}
+.oramenete{
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .oktatas-layout{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
