@@ -1,12 +1,14 @@
 import { Link, NavLink, useLocation } from "react-router";
 import './header.css'
 import { useEffect, useRef, useState } from "react";
+
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const location = useLocation();
     const menuRef = useRef(null);
     const hamburgerRef = useRef(null);
     const [showSubHeading, setShowSubHeading] = useState(true);
+    const [showRolamAnchor, setShowRolamAnchor] = useState(true);
 
     // Hide/show sub-heading on resize and mount
     useEffect(() => {
@@ -24,6 +26,11 @@ const Header = () => {
 
     useEffect(() => {
         setMenuVisible(false);
+    }, [location]);
+
+    useEffect(() => {
+        // Only show #rolam anchor on homepage
+        setShowRolamAnchor(location.pathname === "/");
     }, [location]);
 
     useEffect(() => {
@@ -95,10 +102,11 @@ const Header = () => {
                     <li>
                         <NavLink to={'/kapcsolat'} className={({ isActive }) => (isActive ? 'active' : '')}>Kapcsolat</NavLink>
                     </li>
-                    
-                    <li>
-                        <a href={'#rolam'} className={({ isActive }) => (isActive ? 'active' : '')}>Rólam</a>
-                    </li>
+                    {showRolamAnchor && (
+                        <li>
+                            <a href="#rolam">Rólam</a>
+                        </li>
+                    )}
                 </ul>
             </nav>
         </div>

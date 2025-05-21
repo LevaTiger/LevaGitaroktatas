@@ -3,9 +3,12 @@
 .home-layout{
 
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(-90deg, black, hsl(273, 100%, 15%), hsl(273, 20%, 80%));
+    background: linear-gradient(90deg, black, hsl(273, 100%, 15%), hsl(273, 20%, 80%));
     width: 100%;
     min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .homepage-width {
     display: flex;
@@ -14,9 +17,9 @@
     justify-content: space-around;
     max-width: 1200px;
     width: 100%;
-    min-height: 500px;
-    padding-left: 2rem;
+    min-height: 400px;
     gap: 2rem;
+    padding: .5rem;
 }
 .homepage-text{
     display: flex;
@@ -84,7 +87,24 @@
         background-position: 0% 50%;
     }
 }
+/*Színes szöveg animálása kicsiben*/
+@keyframes colorful-move-small {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
+.homepage-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .homepage-img img {
     display: block;
     max-width: 450px;
@@ -257,31 +277,38 @@
     min-height: 500px;
     width: 100%;
     overflow: hidden;
+
     display: flex;
-    align-items: stretch;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
     background: black;
+
 }
 .about-me-bg-img{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    z-index: 1;
-    filter: brightness(0.7);
-    pointer-events: none;
-    user-select: none;
+    object-fit: contain;
+}
+
+.about-me-bg figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%; /* or whatever fits your design */
+    margin: 0 2rem 2rem 0;
+}
+.about-me-bg figure figcaption{
+    color: white;
 }
 
 .about-me{
     position: relative;
     z-index: 2;
     color: white;
-    max-width: 700px;
+    width: 50%;
     margin: 0 auto;
     padding: 3rem 2rem 2rem 2rem;
     border-radius: 1rem;
@@ -306,7 +333,6 @@
     .homepage-width {
         flex-direction: column;
         align-items: center;
-        padding-left: 1rem;
         gap: 1rem;
         min-height: 220px;
     }
@@ -326,7 +352,23 @@
         font-size: 28px;
         padding-right: 0;
         padding-left: 0;
+        
     }
+    .homepage-text .colorful{
+        background: linear-gradient(90deg, hsl(216, 96%, 58%),  hsl(135, 90%, 58%), hsl(216, 96%, 58%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 28px;
+        padding-right: 0;
+        padding-left: 0;
+        animation: colorful-move-small 3s linear infinite, swim-in 1s cubic-bezier(.77,0,.18,1) forwards;
+        animation-delay: 0.3s, 0.3s;
+        opacity: 0;
+        transform: translateX(-60px);
+    
+    
+    }
+    
     .homepage-img img {
         max-width: 100%;
     }
@@ -335,6 +377,9 @@
         width: 95%;
     }
     .short-info{
+        flex-direction: column;
+    }
+    .about-me-bg{
         flex-direction: column;
     }
     .about-me-bg-img {
@@ -346,6 +391,10 @@
         /* background: linear-gradient(180deg, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.2) 100%); */
         max-width: 98vw;
         background: linear-gradient(90deg, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.2) 100%);
+
+    }
+    .about-me-bg figure {
+        margin: 0 0 2rem 0;
 
     }
 }

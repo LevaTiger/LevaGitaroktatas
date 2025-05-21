@@ -10,7 +10,7 @@ const Kapcsolat = () => {
                 <div className="kapcsolat-card">
                     <div className="kapcsolat-item">
                         <FaEnvelope className="kapcsolat-icon" />
-                        <a href="gitaroktatas.levente@gmail.com">gitaroktatas.levente@gmail.com</a>
+                        <a href="mailto:gitaroktatas.levente@gmail.com">gitaroktatas.levente@gmail.com</a>
                     </div>
                     <div className="kapcsolat-item">
                         <FaInstagram className="kapcsolat-icon" />

@@ -25,7 +25,8 @@
     gap: 2rem;
     align-items: center;
     margin-top: 1.5rem;
-    width: 80%
+    width: 80%;
+    box-sizing: border-box;
 }
 
 .kapcsolat-item {
