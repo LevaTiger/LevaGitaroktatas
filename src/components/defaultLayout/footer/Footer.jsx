@@ -2,6 +2,10 @@ import { Link, NavLink } from 'react-router';
 import './footer.css'
 const Footer =()=>{
 
+    const handleNavClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return(
         <footer>
             <div className='footer-content'>
@@ -11,17 +15,15 @@ const Footer =()=>{
                     <h4>Gyors link</h4>
                     <ul>
                         <li>
-                            <NavLink to={'/'} className={({ isActive }) => (isActive ? 'active' : '')}>Főoldal</NavLink>
-                        </li>
-                        {/* <li>
-                            <NavLink to={'/noi-parfumok'} className={({ isActive }) => (isActive ? 'active' : '')}>Női Parfümök</NavLink>
+                            <NavLink to={'/'} onClick={handleNavClick} className={({ isActive }) => (isActive ? 'active' : '')}>Főoldal</NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/unisex-parfumok'} className={({ isActive }) => (isActive ? 'active' : '')}>Unisex Parfümök</NavLink>
+                            <NavLink to={'/gitaroktatas'} onClick={handleNavClick} className={({ isActive }) => (isActive ? 'active' : '')}>Gitároktatás</NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/rolunk'} className={({ isActive }) => (isActive ? 'active' : '')}>Rólunk</NavLink>
-                        </li> */}
+                            <NavLink to={'/kapcsolat'} onClick={handleNavClick} className={({ isActive }) => (isActive ? 'active' : '')}>Kapcsolat</NavLink>
+                        </li>
+                
                     </ul>
                 </div>
             </div>

@@ -103,9 +103,14 @@ const Header = () => {
                         <NavLink to={'/kapcsolat'} className={({ isActive }) => (isActive ? 'active' : '')}>Kapcsolat</NavLink>
                     </li>
                     {showRolamAnchor && (
-                        <li>
-                            <a href="#rolam">Rólam</a>
-                        </li>
+                        <>
+                          <li>
+                              <a href="#videok">Videók</a>
+                          </li>
+                          <li>
+                              <a href="#rolam">Rólam</a>
+                          </li>
+                      </>
                     )}
                 </ul>
             </nav>

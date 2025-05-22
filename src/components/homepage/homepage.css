@@ -297,7 +297,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: 50%; /* or whatever fits your design */
+    min-width: 320px;
+    max-width: 50%; /* or whatever fits your design */
     margin: 0 2rem 2rem 0;
 }
 .about-me-bg figure figcaption{
@@ -329,6 +330,46 @@
     letter-spacing: 1px;
 }
 
+
+.videos-wrapper{
+    padding: 2rem;
+    
+}
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 400px;
+}
+.videos .video-container{
+    flex: 1 1 45%;
+    max-width: 45%;    
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+.video-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fade-in-videos 1s ease-in-out;
+}
+.videos .video-container iframe{
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 340px;
+    border-radius: 1rem;
+    border: none;
+}
+
 @media screen and (max-width: 768px) {
     .homepage-width {
         flex-direction: column;
@@ -354,20 +395,7 @@
         padding-left: 0;
         
     }
-    .homepage-text .colorful{
-        background: linear-gradient(90deg, hsl(216, 96%, 58%),  hsl(135, 90%, 58%), hsl(216, 96%, 58%));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 28px;
-        padding-right: 0;
-        padding-left: 0;
-        animation: colorful-move-small 3s linear infinite, swim-in 1s cubic-bezier(.77,0,.18,1) forwards;
-        animation-delay: 0.3s, 0.3s;
-        opacity: 0;
-        transform: translateX(-60px);
-    
-    
-    }
+ 
     
     .homepage-img img {
         max-width: 100%;
@@ -385,6 +413,9 @@
     .about-me-bg-img {
         object-position: center 20%;
         height: 100%;
+        width: 90vw;
+        max-width: 98vw;
+        margin: 0 auto;
     }
     .about-me {
         padding: 2rem 1rem 1rem 1rem;
@@ -397,4 +428,20 @@
         margin: 0 0 2rem 0;
 
     }
+
+    .videos {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .video-container {
+        max-width: 98vw;
+        width: 98vw;
+
+    }
+    .video-container iframe {
+        width: 98vw;
+        height: 56vw;
+        max-width: 98vw;
+}
+
 }
