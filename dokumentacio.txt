@@ -1,0 +1,37 @@
+# Projekt Dokumentáció
+# Projektet Készítette: Bognár Levente - 
+# linkedIn - https://www.linkedin.com/in/levente-bogn%C3%A1r-32a67226a/
+# github Repo - https://github.com/LevaTiger/LevaGitaroktatas
+Ez a projekt **React**-ben készült, a navigációhoz a **react-router-dom** könyvtárat használja, a stílushoz pedig **Bootstrap**-et és egyedi CSS-t. Az alábbiakban röviden bemutatom a főbb komponenseket, a layout felépítését és a router működését.
+
+---
+
+## Főbb komponensek
+
+- **Homepage**  
+  A főoldal, ahol bemutatkozás, rövid információk, képek, videók és elérhetőségek találhatók.  
+  Itt animációk is vannak: a szövegek és videók csak akkor jelennek meg animáltan, amikor a felhasználó odagörget.
+
+- **Kapcsolat**  
+  Elérhetőségi oldal, ahol e-mail, Instagram és TikTok linkek találhatók ikonokkal.
+
+- **Header**  
+  Az oldal tetején lévő navigációs sáv.  
+  Tartalmaz logót, menüpontokat (Főoldal, Gitároktatás, Kapcsolat, Rólam, Videók), amelyekből a "Rólam" és a "Videók" csak a főoldalon jelennek meg.
+
+- **Footer**  
+  Az oldal alján található, gyors linkekkel (navigáció a lap tetejére az alkalmazáson belül), valamint közösségi média ikonokkal (GitHub, LinkedIn).
+
+---
+
+## Layout felépítése
+
+- **DefaultLayout**  
+  Ez a komponens fogja össze az oldalak közös elemeit:  
+  - **Header** (fejléc, navigáció)
+  - **Outlet** (ide töltődnek be az aktuális oldalak, pl. Homepage, Kapcsolat)
+  - **Footer** (lábléc)
+
+A DefaultLayout minden oldalon megjelenik, így biztosítva az egységes megjelenést.
+
+---
