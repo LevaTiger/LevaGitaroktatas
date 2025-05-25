@@ -76,7 +76,7 @@ const Gitaroktatas = () => {
 
             </div>
                 <button onClick={goToContact} className="action-btn mb-4">Elérhetőség</button>
-            <div className="oramenete">
+            <div className="oramenete m-4">
                 <h3>Hogy néz ki egy óra?</h3>
                 <p>Egy óra menete alapvetően nagyon egyszerűen történik: <br />
                 Egy kis beszélgetéssel ráhangolódással kezdünk, majd elkezdjük az új anyagot tanulni. <br />

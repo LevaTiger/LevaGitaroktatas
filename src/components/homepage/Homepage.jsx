@@ -206,7 +206,7 @@ const Homepage = () => {
                                     </div>
                 </div>
             </div>
-            <section className="me-developer d-flex flex-column align-items-center justify-content-center gap-4 text-center mt-2">
+            <section className="me-developer d-flex flex-column align-items-center justify-content-center gap-4 text-center m-4">
                 <h4>Extra információk</h4>
                 <p>
                     <b>2024-ben a Soter-Line Oktatási Központban</b> kezdtem <b>Front end fejlesztői</b> képzést, <br />
