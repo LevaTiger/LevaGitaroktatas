@@ -4,22 +4,6 @@ import "./kepek.css";
 
 const images = [
   {
-    src: "/assets/kepek-oldal/kozmix-Dori-Levi.webp",
-    caption: "Kozmix koncert",
-  },
-  {
-    src: "/assets/kepek-oldal/kozmix-hatulrol.webp",
-    caption: "Kozmix koncert",
-  },
-  {
-    src: "/assets/kepek-oldal/kozmix-Lala-Dori-Levi.webp",
-    caption: "Kozmix koncert ",
-  },
-  {
-    src: "/assets/kepek-oldal/kozmix-levi-tapping.webp",
-    caption: "Kozmix koncert",
-  },
-  {
     src: "/assets/kepek-oldal/lunda-kaposzta.webp",
     caption: "Lunda koncert - Gyergyói Kápszta Fesztivál",
   },
@@ -34,6 +18,22 @@ const images = [
   {
     src: "/assets/kepek-oldal/lunda-sicfest.webp",
     caption: "Lunda koncert - Sic Feszt",
+  },
+  {
+    src: "/assets/kepek-oldal/kozmix-Dori-Levi.webp",
+    caption: "Kozmix koncert",
+  },
+  {
+    src: "/assets/kepek-oldal/kozmix-hatulrol.webp",
+    caption: "Kozmix koncert",
+  },
+  {
+    src: "/assets/kepek-oldal/kozmix-Lala-Dori-Levi.webp",
+    caption: "Kozmix koncert ",
+  },
+  {
+    src: "/assets/kepek-oldal/kozmix-levi-tapping.webp",
+    caption: "Kozmix koncert",
   },
   {
     src: "/assets/kepek-oldal/lunda-szulinapi-mosoly.webp",
