@@ -3,6 +3,7 @@ import Homepage from "../components/homepage/Homepage";
 import DefaultLayout from "../components/defaultLayout/DefaultLayout";
 import Gitaroktatas from "../components/gitaroktatas/Gitaroktatas";
 import Kapcsolat from "../components/kapcsolat/Kapcsolat";
+import Kepek from "../components/kepek/Kepek";
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path:'/kapcsolat',
                 element: <Kapcsolat />
+            },
+            {
+                path:'/kepek',
+                element: <Kepek />
             }
 
         ]
