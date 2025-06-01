@@ -99,19 +99,18 @@ const Kepek = () => {
   
     // Auto-slide for slider
     useEffect(() => {
+      // Always clear previous interval before setting a new one
+      if (intervalRef.current) clearInterval(intervalRef.current);
       intervalRef.current = setInterval(() => {
         setCurrent((prev) => (prev + 1) % images.length);
       }, 3000);
       return () => clearInterval(intervalRef.current);
-    }, []);
-  
-    // Manual navigation resets timer
+    }, [current]); // <-- add current as dependency
+
+    // Manual navigation resets timer correctly
     const goTo = (idx) => {
       setCurrent(idx);
-      clearInterval(intervalRef.current);
-      intervalRef.current = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % images.length);
-      }, 700);
+      // No need to clear/set interval here, useEffect above will handle it
     };
   
     return (
